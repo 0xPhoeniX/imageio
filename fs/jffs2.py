@@ -28,7 +28,7 @@ class JffsImage():
 
     def _genRootInode(self, src):
         '''
-            JFFS2 does not have root inode. The function generate
+            JFFS2 does not have root inode. The function generates
             dummy root inode to support easy fs traversal.
             Dummy node is generated from first dir node found in
             inode list.
@@ -121,7 +121,7 @@ class JffsImage():
         except KeyError:
             data = bytearray(inode['vers'][0].isize)
             for item in inode['vers']:
-                data[item.offset:(item.offset + item.dsize)] = item.data    # TODO -> handle data dubliction
+                data[item.offset:(item.offset + item.dsize)] = item.data    # TODO -> handle data duplication
             inode['data'] = data
         return bytes(data)
 
