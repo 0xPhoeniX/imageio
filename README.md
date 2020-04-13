@@ -11,6 +11,10 @@ Simple, pure Python 3, FUSE-based rootFS image read-only access. Currently suppo
   - To get debug info: `python fuse_driver.py -d -m [mount_dir] [path_to_rootFS]`
 
 
+## Examples
+- `./examples/dumpFile.py` gives an example how to extract a file from an image without mounting.
+
+
 Limited testing was done on LZO, LZMA, XZ compressed images.
 
 Pull requests, suggestions are welcome.
