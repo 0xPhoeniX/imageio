@@ -34,11 +34,11 @@ class RTimeCompressor(Compressor):
         outpos = 0
         pos = 0
         while outpos < dsize:
-            value = ord(data[pos])
+            value = data[pos]
             pos += 1
             cpage_out[outpos] = value
             outpos += 1
-            repeat = ord(data[pos])
+            repeat = data[pos]
             pos += 1
 
             backoffs = positions[value]
